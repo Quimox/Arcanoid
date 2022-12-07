@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+.canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 930px;
+    overflow: hidden;
+
+}
+
+@media (max-width: 812px) and (orientation: landscape) {
+    .canvas{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width: 1080px) and (orientation: landscape) {
+    .canvas{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.bg-rajola{
+    background-image: url('/vinalab22/app/media/portadas-juegos/bg-jocs.jpg');
+    max-height: 940px;
+}
+:root{
+    --bg-principal: #4b8391;
+    --font-principal: 'Roboto', sans-serif;
+}
+html, body{
+    font-family: var(--font-principal);
+    background-color: var(--bg-principal);
+}
+
+#recicla canvas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+.botodetornar{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 99;
+    padding: 8px 35px;
+    border-radius: 5px;
+}
+button {
+    /* Variables */
+    --button_radius: 50%;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    position: absolute;
+    top: 30px;
+    left:30px;
+    z-index: 99;
+}
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 1.5px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 1em 1em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.1em);
+    transition: transform 0.1s ease;
+}
+button:hover .button_top {
+    transform: translateY(-0.33em);
+    cursor: pointer;
+}
+button:active .button_top {
+    transform: translateY(0);
+    cursor: pointer;
+}
